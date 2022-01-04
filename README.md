@@ -12,7 +12,6 @@
 <h2>Wireframe</h2>
 ![](images/Project-1-Wireframe.png)
 
-
 <h3>User Stories</h3>
 <ul>
 <li>As a player, I want to be able to start the game.</li>
