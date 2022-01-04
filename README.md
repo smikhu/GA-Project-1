@@ -10,9 +10,13 @@
 
 
 <h2>Wireframe</h2>
+<<<<<<< HEAD
 
 ![](images/Project-1-Wireframe.png)
+=======
+>>>>>>> 507f2f2010d475cfd3e1ccc95af85dba300f9454
 
+![](images/Project-1-Wireframe.png)
 
 <h3>User Stories</h3>
 <ul>
