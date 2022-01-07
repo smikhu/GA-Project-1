@@ -6,6 +6,59 @@
 
 body {
     height: 100vh;
+}
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 20px;
+}
+
+.front {
+    /* visibility: hidden; */
+}
+
+img {
+    width: 75px;
+    height: 100%;
+}
+
+#gameOver {
+    position: absolute;
+    visibility: hidden;
+}
+
+#winGame {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
     display: flex;
 }
 
@@ -39,10 +92,26 @@ body {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
-}
+} */
 
 
 
 
+/* .card {
+    transform: scale(1);
+    transition: transform .5s;
+} */
 
+/* .grid {
+    perspective: 1000px;
+} */
 
+/* .card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+} */
