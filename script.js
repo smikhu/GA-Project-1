@@ -10,9 +10,6 @@ let moves = 7;
 // variables for first and second choice function
 let firstChoice = null;
 let secondChoice = null;
-let firstDiv = null;
-let secondDiv = null;
-
 
 // variables for matchCounter function
 let matched = document.querySelector('.matches')
@@ -27,59 +24,54 @@ button.addEventListener('click', reset)
 let button1 = document.querySelector('.btn1')
 button1.addEventListener('click', reset)
 
-
-
 // game over variables
 gameOverMenu = document.getElementById("gameOver")
 
 // win menu variables
 playAgainMenu = document.getElementById("winGame")
 
-
 shuffle();
 
-
 // a flip card function that toggles a flip on click
-function flipCard() {
-    // this.style.backgroundColor = 'red'
+function flipCard(event) {
     if(firstChoice === null) {
-        firstDiv = this
-        firstChoice = this.dataset.name
+        firstChoice = event.target
         console.log(firstChoice)
+        event.target.src = `./images/${this.dataset.name}.png`
     } else {
-        secondDiv = this
-        secondChoice = this.dataset.name
-        console.log(secondChoice)
-        checkForMatch()
         
+        secondChoice = event.target
+        console.log(secondChoice)
+        event.target.src = `./images/${this.dataset.name}.png`
+        checkForMatch() 
     }
 }
 
 function checkForMatch() {
-    if(firstChoice === secondChoice) {
+    console.log('checkForMatch is being run')
+    console.log('firstChoice is', firstChoice)
+    console.log('secondChoice is', secondChoice)
+    
+    if(firstChoice.dataset.name === secondChoice.dataset.name) {
+        // if they match, i want the cards to stay flipped over
         console.log("match")
         firstChoice = null;
         secondChoice = null;
-        firstDiv = null;
-        secondDiv = null;
         matches++
         matchCounter()
-        
-
     } else {
+        // if they DONT match, flip them back to cover
         console.log('no match')
+        setTimeout(function () {
+        firstChoice.src = './images/back.png'
+        secondChoice.src = './images/back.png'
+        // setTimeOut make line 84 happen AFTER a slight delay (images turning too fast)
         firstChoice = null;
         secondChoice = null;
-        // firstDiv.style.backgroundColor = ''
-        firstDiv = null;
-        // secondDiv.style.backgroundColor = ''
-        secondDiv = null;
         moveCounter()
-        
-
+    }, 1000)
     }
 }
-
 
 // add a shuffle function that randomly distributes the cards in random spots every time page is loaded (or maybe when reset button is clicked as well)
 
@@ -109,17 +101,16 @@ function matchCounter() {
     }
 }
 
-
 // game over menu
 function setLoseState(state) {
-    showWinMenu(state);
+    showLoseMenu(state);
 }
 
 function displayMenu(menu) {
     menu.style.visibility = 'visible'
 }
 
-function showWinMenu(state) {
+function showLoseMenu(state) {
     if (state == 'GAME OVER') {
         displayMenu(gameOverMenu);
     }
@@ -127,20 +118,19 @@ function showWinMenu(state) {
 
 // win game menu
 function setWinState(state) {
-    showLoseMenu(state)
+    showWinMenu(state)
 }
 
-function showLoseMenu(state) {
+function showWinMenu(state) {
     if (state == "Congratulations! You've matched them all!") {
         displayMenu(playAgainMenu);
     }
 }
 
-
-
 // add a function that resets the board when clicked on
 
 function reset() {
+    
     shuffle()
  }
 
