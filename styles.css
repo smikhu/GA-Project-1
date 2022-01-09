@@ -2,117 +2,111 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Cinzel Decorative', cursive;
 }
 
 body {
     height: 100vh;
+    width: 100vw;
+    border: 3px solid white;
+    background-image: url(https://wallpaperaccess.com/full/673915.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: url(./images/cursor.png), auto;
 }
 
 
 .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 699px;
+    margin-left: 60%;
+    margin-top: 10px;
 }
 
 .card {
     margin: 20px;
+    transform-style: preserve-3d;
+}
+
+.card.click {
+    transform: rotateY(180deg);
 }
 
 img {
     width: 100px;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
+    border: 3px solid whitesmoke;
+    box-shadow: 5px 5px 30px 1px red;
 }
 
 .front {
-    height: 200px;
+    height: 175px;
 }
 
 #gameOver {
+    color: white;
     position: absolute;
     visibility: hidden;
+    width: 30%;
+    margin-top: 350px;
+    margin-left: 250px;
+    font-size: 36px;
 }
 
 #winGame {
+    color: white;
     position: absolute;
     visibility: hidden;
+    width: 30%;
+    margin-top: 350px;
+    margin-left: 250px;
+    font-size: 36px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-}
-
-
-.grid {
-    width: 500px;
-    height: 700px;
+.text {
+    width: 25%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1260px;
+    margin-top: 10px;
+    color: white;
+    font-size: 24px;
 }
 
-.card {
-    width: calc(25% - 10px);
-    height: calc(30% - 50px);
-    position: relative;
-    margin: 5px;
-    transform-style: preserve-3d;
-}
-
-.card.flip {
-    transform: rotateY(180deg);
-}
-
-.front {
-    transform: rotateY(180deg);
-}
-
-.front, .back {
+.border {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-} */
+    width: 700px;
+    height: 900px;
+    margin-left: 1050px;
+    margin-top: 50px;
+}
 
+.btn, .btn1 {
+    height: 35px;
+    width: 100px;
+    margin-left: 140px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px 10px red;
+    cursor: url(./images/cursor.png), auto;
+}
 
+p {
+    color: white;
+    width: 55%;
+    font-size: 16px;
+    margin-left: 50px;
+}
 
+h2 {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    margin-left: 250px;
+    margin-top: 10px;
 
-/* .card {
-    transform: scale(1);
-    transition: transform .5s;
-} */
-
-/* .grid {
-    perspective: 1000px;
-} */
-
-/* .card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
-  position: relative;
-  transform: scale(1);
-  transform-style: preserve-3d;
-  transition: transform .5s;
-} */
+}

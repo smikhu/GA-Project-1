@@ -17,12 +17,12 @@ let matches = 0;
 let win = cards.length/2;
 
 // variables for lose state reset button
-let button = document.querySelector('.btn')
-button.addEventListener('click', reset)
+let resetButton = document.querySelector('.btn')
+resetButton.addEventListener('click', reset)
 
 // variables for win state reset button
-let button1 = document.querySelector('.btn1')
-button1.addEventListener('click', reset)
+let winButton = document.querySelector('.btn1')
+winButton.addEventListener('click', reset)
 
 // game over variables
 gameOverMenu = document.getElementById("gameOver")
@@ -47,6 +47,15 @@ function flipCard(event) {
     }
 }
 
+// a function to reset all the cards to the back side when reset button is clicked
+function resetAllCards() {
+    document.querySelectorAll('.front').forEach( (card) => {
+        card.src = './images/back.png'
+}) 
+}
+
+
+// a function that checks to see if the cards match or not
 function checkForMatch() {
     console.log('checkForMatch is being run')
     console.log('firstChoice is', firstChoice)
@@ -130,7 +139,13 @@ function showWinMenu(state) {
 // add a function that resets the board when clicked on
 
 function reset() {
-    
+    resetAllCards()
     shuffle()
+    gameOverMenu.style.visibility = 'hidden'
+    playAgainMenu.style.visibility = 'hidden'
+    moves = 7;
+    matches = 0;
+    matched.innerHTML = matches;
+    counter.innerHTML = moves;
  }
 

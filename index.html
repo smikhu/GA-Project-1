@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <script defer src="./script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="title">
-        <h1>Gwent Matching</h1>
-    </div> -->
+    <h2 class="title">GWENT PAIRS</h2>
     <div class="text">
-        <div>Moves: <span class="moves">7</span></div>
+        <div>Moves Left: <span class="moves">7</span></div>
+        <div>Matched: <span class="matches">0</span></div>
     </div>
 
-    <div class="text">
-        <div>Matches: <span class="matches">0</span></div>
-    </div>
+    <section id="gameOver">
+        <h1 class="animate">GAME OVER!</h1>
+        <button class="btn">Reset</button>
+    </section>
+
+    <section id="winGame">
+        <h1 class="animate">YOU'VE WON!</h1>
+        <button class='btn1'>PLAY AGAIN</button>
+    </section>
 
     <div class="grid">
+        
         <!-- set data name on the card itself -->
         <div class="card" data-name='geralt'>
             <img class="front" data-name='geralt' src="./images/back.png">
@@ -74,17 +83,7 @@
         </div>
     </div>
 
-
-
-    <section id="gameOver">
-        <h1>GAME OVER!</h1>
-        <button class="btn">Reset</button>
-    </section>
-
-    <section id="winGame">
-        <h1>Congratulations! You've matched them all!</h1>
-        <button class='btn1'>Play Again?</button>
-    </section>
+    <p>Match all the cards on the board before you run out of moves!</p>
 
 </body>
 </html>
