@@ -1,6 +1,9 @@
-<h1>Gwent Matching</h1>
+<h1>Gwent Pairs</h1>
+
+<p>An app inspired by the video game series The Witcher. A matching game where you have a limited amount of chances to match all 8 cards(Gwent cards from The Witcher 3 : The Wild Hunt) on the board before it's game over.</p>
 
 <h2>Technologies Used</h2>
+
 <ul>
 <li>HTML</li>
 <li>CSS</li>
@@ -9,14 +12,19 @@
 
 
 
-<h2>Wireframe</h2>
-
-![](images/Project-1-Wireframe.png)
-
 <h3>User Stories</h3>
-<ul>
-<li>As a player, I want to be able to start the game.</li>
-<li>As a player, I want to be able to flip the cards and be able to match them to complete the game</li>
-<li>As a player, I want to know how many lives I have left as I play</li>
-<li>As a player, I want to know how long it took me to complete the game</li>
-</ul>
+
+https://trello.com/b/0HjjJLKN/project-1
+
+<h2>Desktop Version</h2>
+
+![](images/Project1.png)
+
+<h2>Mobile Version</h2>
+
+- Coming Soon!
+
+<h3>Live Game</h3>
+
+https://smikhu.github.io/GA-Project-1/
+
