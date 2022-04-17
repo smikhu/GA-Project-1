@@ -26,5 +26,5 @@ https://trello.com/b/0HjjJLKN/project-1
 
 <h3>Live Game</h3>
 
-https://smikhu.github.io/GA-Project-1/
+https://smikhu.github.io/Gwent-Pairs/
 
